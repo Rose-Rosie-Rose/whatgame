@@ -1,59 +1,33 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>재밌는 사이트 모음</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+# 재밌는 사이트 모음
 
-  <header class="hero">
-    <p class="hero-eyebrow">우리 팀이 직접 고른</p>
-    <h1>재밌는 사이트 모음</h1>
-    <p class="hero-desc">심심할 때 하나씩 눌러보세요.</p>
-  </header>
+깃 · 깃허브 특강 팀 프로젝트용 예제 저장소입니다.
 
-  <main class="container">
-    <ul class="card-grid">
+## 이 저장소는 무엇인가요
 
-      <!-- ▼▼▼▼▼ 카드 하나 시작 — 이 블록을 복사해서 쓰세요 ▼▼▼▼▼ -->
-      <li class="card">
-        <a class="card-link" href="sites/neal-fun.html">
-          <span class="card-thumb" style="--thumb:#ffe4c2">🧪</span>
-          <span class="card-body">
-            <strong class="card-title">Neal.fun</strong>
-            <span class="card-summary">
-              스크롤을 내리는 것만으로 우주의 크기를 체감하게 만드는 실험 모음
-            </span>
-            <span class="card-meta">추천 · 윤가희</span>
-          </span>
-        </a>
-      </li>
-      <!-- ▲▲▲▲▲ 카드 하나 끝 ▲▲▲▲▲ -->
+우리 팀이 각자 추천하는 사이트를 모아두는 링크 모음 사이트입니다.
 
-      <li class="card card-empty">
-        <span>
-          <span class="plus">＋</span>
-          <strong>여기에 내 카드가 들어갑니다</strong>
-          <em>위 블록을 복사해서 아래에 붙이세요</em>
-        </span>
-      </li>
+- **홈**(`index.html`) — 추천 사이트가 카드로 나열됩니다
+- **상세 페이지**(`sites/*.html`) — 그 사이트가 어떤 곳인지 소개하고, 원래 사이트로 가는 링크를 둡니다
 
-      <li class="card card-empty">
-        <span>
-          <span class="plus">＋</span>
-          <strong>여기에 내 카드가 들어갑니다</strong>
-          <em>위 블록을 복사해서 아래에 붙이세요</em>
-        </span>
-      </li>
+## 파일 구조
 
-    </ul>
-  </main>
+```
+.
+├── index.html            홈 — 카드 목록 (팀원 모두가 고칩니다)
+├── style.css             공통 스타일 (아무도 고치지 않습니다)
+└── sites/
+    └── neal-fun.html     상세 페이지 예시 — 이 파일을 복사해서 쓰세요
+```
 
-  <footer class="site-foot">
-    깃 · 깃허브 특강 팀 프로젝트
-  </footer>
+## 내 사이트를 추가하는 방법
 
-</body>
-</html>
+1. `main` 브랜치로 이동한 뒤 `feature/<사이트이름>` 브랜치를 만듭니다
+2. `sites/neal-fun.html` 을 복사해 `sites/<사이트이름>.html` 로 저장하고 내용을 채웁니다
+3. `index.html` 의 카드 블록(`▼▼▼ 카드 하나 시작` ~ `▲▲▲ 카드 하나 끝`)을 복사해
+   목록 아래에 붙이고, 링크·제목·소개·이모지·색을 내 것으로 바꿉니다
+4. 커밋하고 푸시한 뒤 풀 리퀘스트를 보냅니다
+
+## 주의
+
+- `index.html` 은 팀원 모두가 같은 자리를 고칩니다. **충돌이 나는 것이 정상입니다.**
+- HTML 을 실제로 구현하는 과제가 아닙니다. 파일을 만들고 링크를 연결하는 것까지가 범위입니다.
