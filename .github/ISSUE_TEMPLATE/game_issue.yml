@@ -1,0 +1,95 @@
+name: 🎮 게임 추천
+description: 재미있게 플레이한 게임을 추천해주세요!
+title: "[게임추천] "
+labels: ["game-recommendation"]
+body:
+  - type: input
+    id: game-title
+    attributes:
+      label: 게임 제목
+      description: 추천하고 싶은 게임의 이름을 적어주세요.
+      placeholder: 예) 젤다의 전설 티어스 오브 더 킹덤
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 플랫폼
+      description: 어떤 플랫폼에서 플레이할 수 있나요? (복수 선택 가능)
+      multiple: true
+      options:
+        - PC (Steam)
+        - PC (기타)
+        - PlayStation
+        - Xbox
+        - Nintendo Switch
+        - 모바일 (iOS)
+        - 모바일 (Android)
+        - 기타
+    validations:
+      required: true
+
+  - type: dropdown
+    id: genre
+    attributes:
+      label: 장르
+      description: 게임의 장르를 선택해주세요. (복수 선택 가능)
+      multiple: true
+      options:
+        - 액션
+        - 어드벤처
+        - RPG
+        - 전략/시뮬레이션
+        - 퍼즐
+        - 스포츠/레이싱
+        - 호러
+        - 인디
+        - 멀티플레이어/온라인
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 추천 이유
+      description: 이 게임을 왜 추천하는지 자유롭게 작성해주세요.
+      placeholder: 스토리, 그래픽, 게임성, 분위기 등 어떤 점이 좋았는지 알려주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: 이런 분께 추천해요
+      description: 어떤 취향/성향의 유저에게 잘 맞을지 적어주세요. (선택)
+      placeholder: 예) 스토리 중심 게임을 좋아하는 분, 협동 플레이를 즐기는 분 등
+    validations:
+      required: false
+
+  - type: input
+    id: playtime
+    attributes:
+      label: 예상 플레이 타임
+      description: 클리어 또는 충분히 즐기기까지 걸리는 시간 (선택)
+      placeholder: 예) 약 20시간
+    validations:
+      required: false
+
+  - type: input
+    id: link
+    attributes:
+      label: 관련 링크
+      description: 스토어 페이지, 공식 사이트, 트레일러 등 (선택)
+      placeholder: https://
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 확인사항
+      options:
+        - label: 중복된 추천이 없는지 확인했습니다.
+          required: true
